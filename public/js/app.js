@@ -9,7 +9,7 @@ const messageTwo = document.querySelector('#error');
 weatherForm.addEventListener('submit',(event) => {
     event.preventDefault();
     const location = searchElement.value;
-    const url = 'http://localhost:3000/weather?address='+location;
+    const url = '/weather?address='+location;
     messageOne.textContent = 'Loading...';
     messageTwo.textContent = '';
     fetch(url).then((res) => {
